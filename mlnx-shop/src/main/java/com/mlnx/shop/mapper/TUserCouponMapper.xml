@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mlnx.shop.mapper.TUserCouponMapper">
+	<resultMap id="BaseResultMap" type="com.mlnx.shop.entity.TUserCoupon">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="user_id" property="userId" jdbcType="INTEGER" />
+		<result column="coupon_id" property="couponId" jdbcType="INTEGER" />
+	</resultMap>
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+		delete from
+		t_user_coupon
+		where id = #{id}
+	</delete>
+	<insert id="insert" parameterType="com.mlnx.shop.entity.TUserCoupon">
+		<selectKey resultType="java.lang.Integer" keyProperty="id"
+			order="BEFORE">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+		insert into t_user_coupon (id, user_id, coupon_id
+		)
+		values (#{id},
+		#{userId},
+		#{couponId}
+		)
+	</insert>
+	<update id="updateByPrimaryKey" parameterType="com.mlnx.shop.entity.TUserCoupon">
+		update
+		t_user_coupon
+		set user_id = #{userId},
+		coupon_id = #{couponId}
+		where id =
+		#{id}
+	</update>
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="java.lang.Integer">
+		select id, user_id, coupon_id
+		from t_user_coupon
+		where id
+		= #{id}
+	</select>
+	<select id="selectAll" resultMap="BaseResultMap">
+		select id, user_id, coupon_id
+		from t_user_coupon
+	</select>
+	<select id="findCouponById" resultType="int" parameterType="int">
+		select coupon_id
+		from t_user_coupon where user_id = #{user_id}
+	</select>
+</mapper>

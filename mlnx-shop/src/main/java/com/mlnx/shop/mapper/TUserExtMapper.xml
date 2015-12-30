@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mlnx.shop.mapper.TUserExtMapper">
+	<resultMap id="BaseResultMap" type="com.mlnx.shop.entity.TUserExt">
+		<id column="user_id" property="userId" jdbcType="INTEGER" />
+		<result column="pic" property="pic" jdbcType="VARCHAR" />
+		<result column="nickname" property="nickname" jdbcType="VARCHAR" />
+		<result column="integral" property="integral" jdbcType="INTEGER" />
+		<result column="money" property="money" jdbcType="DOUBLE" />
+	</resultMap>
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+		delete from
+		t_user_ext
+		where user_id = #{userId}
+	</delete>
+	<insert id="insert" parameterType="com.mlnx.shop.entity.TUserExt">
+		insert into t_user_ext
+		(user_id, pic, nickname,
+		integral,money)
+		values
+		(#{userId}, #{pic},
+		#{nickname},
+		#{integral},#{money})
+	</insert>
+	<update id="updateByPrimaryKey" parameterType="com.mlnx.shop.entity.TUserExt">
+		update t_user_ext
+		<set>
+			<if test="pic != null and pic !=''">
+				pic = #{pic},
+			</if>
+			<if test="nickname != null and nickname''">
+				nickname = #{nickname},
+			</if>
+			<if test="integral != null and integral !=''">
+				integral = #{integral},
+			</if>
+			<if test="money != null and money !=''">
+				money = #{money}
+			</if>
+		</set>
+		where user_id = #{userId}
+	</update>
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="java.lang.Integer">
+		select *
+		from t_user_ext
+		where user_id =
+		#{userId}
+	</select>
+	<select id="selectAll" resultMap="BaseResultMap">
+		select *
+		from t_user_ext
+	</select>
+</mapper>
