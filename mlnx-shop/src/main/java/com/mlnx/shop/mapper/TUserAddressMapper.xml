@@ -5,6 +5,7 @@
 		<id column="id" property="id" jdbcType="INTEGER" />
 		<result column="user_id" property="userId" jdbcType="INTEGER" />
 		<result column="address" property="address" jdbcType="VARCHAR" />
+		<result column="valid" property="valid" jdbcType="INTEGER" />
 	</resultMap>
 	<delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
 		delete from
@@ -32,21 +33,29 @@
 			<if test="address != null and address != ''">
 				address = #{address}
 			</if>
+			<if test="valid != null and valid != ''">
+				valid = #{valid}
+			</if>
 		</set>
 		where id = #{id}
 	</update>
 	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
 		parameterType="java.lang.Integer">
-		select id, user_id, address
+		select *
 		from t_user_address
 		where id = #{id}
 	</select>
 	<select id="selectAll" resultMap="BaseResultMap">
-		select id, user_id, address
+		select *
 		from t_user_address
 	</select>
 	<select id="findAddressById" resultType="string" parameterType="int">
 		select address
-		from t_user_address where user_id = #{user_id}
+		from t_user_address where user_id = #{userId}
+	</select>
+	<select id="findAddressesById" resultType="tUserAddress"
+		parameterType="int">
+		select *
+		from t_user_address where user_id = #{userId}
 	</select>
 </mapper>

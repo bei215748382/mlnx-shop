@@ -93,4 +93,8 @@ public class UserServiceTest extends TestBase {
 		System.out.println(userService.deleteAddressById(2));
 	}
 
+	@Test
+	public void testFindByPhone() {
+		System.out.println(userService.findByPhone("15867404048"));
+	}
 }

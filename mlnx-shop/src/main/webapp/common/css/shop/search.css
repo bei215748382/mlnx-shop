@@ -1,0 +1,52 @@
+.no-style>li {
+	float: left;
+	width: 25%;
+}
+
+.no-style>li>img {
+	width: 30%;
+}
+
+#shangping img {
+	width: 45%;
+	border: 3px solid #D6D3D3;
+}
+
+p {
+	margin: 8px;
+}
+
+#back {
+	height: 30px;
+}
+
+#header {
+	padding: 10px 10px;
+}
+
+#header input {
+	margin-left: 10%;
+	width: 80%;
+	height: 30px;
+	border: 0px;
+}
+
+input,img {
+	vertical-align: middle;
+}
+#nav img{
+	margin-top:10px;
+}
+.selected{
+	border-bottom:3px solid red;
+}
+#search>ul>li{
+	width:20%;
+	background-color:white;
+}
+#search>ul>li>p{
+	margin-top:10px;
+}
+.selected-topic{
+	color:red;
+}

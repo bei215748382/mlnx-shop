@@ -1,0 +1,32 @@
+body {
+	margin: 0;
+	width: 100%;
+	font-size: 1em;
+	background-color: rgb(245, 245, 245);
+}
+
+.clear {
+	clear: both;
+}
+
+.no-style {
+	margin:0;
+	padding-left: 0;
+	list-style: none;
+}
+.box {
+	width: 100%;
+	margin: 0 0;
+	text-align: center;
+}
+
+.bg-white {
+	background-color: white;
+}
+.bg-blue {
+	background-color: rgb(99, 183, 255);
+}
+.font-white {
+	font-size: 1.2em;
+	color: white;
+}

@@ -1,0 +1,70 @@
+.header {
+	height: 65px;
+	background-color: rgb(99, 183, 255);
+}
+
+.header input {
+	width: 65%;
+}
+
+#shopping {
+	float: right;
+}
+
+.header input,#shopping {
+	margin: 10px;
+	height: 40px;
+}
+
+.banner {
+	width: 100%;
+}
+
+.no-style {
+	padding-left: 0;
+	list-style: none;
+}
+
+.no-style li {
+	float: left;
+	width: 25%;
+}
+
+.classify {
+	text-align: center;
+	background-color: white;
+}
+
+.classify img {
+	padding: 5px;
+	width: 50%;
+}
+
+.desc span {
+	width: 96px;
+}
+
+#left-big {
+	width: 39.444%;
+}
+
+#right-header {
+	width: 60.556%;
+}
+
+.right-footer {
+	width: 30.278%;
+}
+
+#left-big,#right-header,.right-footer,.hot-right,.hot-left {
+	float: left;
+}
+
+.hot-right {
+	width: 51%;
+}
+
+.hot-left {
+	width: 49%;
+}
+

@@ -8,12 +8,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.mlnx.shop.entity.TCoupon;
+import com.mlnx.shop.entity.TGoods;
+import com.mlnx.shop.entity.TOrder;
 import com.mlnx.shop.entity.TUser;
 import com.mlnx.shop.entity.TUserAddress;
 import com.mlnx.shop.entity.TUserCollection;
 import com.mlnx.shop.entity.TUserCoupon;
 import com.mlnx.shop.entity.TUserExt;
 import com.mlnx.shop.exception.RegisterException;
+import com.mlnx.shop.mapper.TOrderMapper;
 import com.mlnx.shop.mapper.TUserAddressMapper;
 import com.mlnx.shop.mapper.TUserCollectionMapper;
 import com.mlnx.shop.mapper.TUserCouponMapper;
@@ -23,6 +27,7 @@ import com.mlnx.shop.service.UserService;
 import com.mlnx.shop.util.EnumCollection.ResponseCode;
 import com.mlnx.shop.util.ShopResponse;
 import com.mlnx.shop.util.StringUtil;
+import com.mlnx.shop.vo.UserVo;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -41,6 +46,9 @@ public class UserServiceImpl implements UserService {
 
 	@Autowired
 	private TUserAddressMapper tUserAddressMapper;
+	
+	@Autowired
+	private TOrderMapper tOrderMapper;
 
 	@Transactional(rollbackFor = RegisterException.class)
 	@Override
@@ -277,6 +285,58 @@ public class UserServiceImpl implements UserService {
 		} catch (Exception e) {
 			e.printStackTrace();
 			return new ShopResponse(ResponseCode.DELETE_USER_ADDRESS_SUCCESS);
+		}
+	}
+
+	@Override
+	public UserVo findByPhone(String phone) {
+		try {
+			return tUserExtMapper.findByPhone(phone);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+
+	@Override
+	public List<TGoods> findCollectionsById(Integer id) {
+		try {
+			return tUserCollectionMapper.findCollectionsById(id);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+
+	@Override
+	public List<TCoupon> findCouponsById(Integer id) {
+		try {
+			return tUserCouponMapper.findCouponsById(id);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+
+	@Override
+	public List<TOrder> findOrdersByIdAndState(TOrder order) {
+		
+		try {
+			return tOrderMapper.findOrdersByIdAndState(order);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+
+	@Override
+	public List<TUserAddress> findAddressesById(Integer id) {
+		
+		try {
+			return tUserAddressMapper.findAddressesById(id);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
 		}
 	}
 

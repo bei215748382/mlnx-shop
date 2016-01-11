@@ -1,0 +1,66 @@
+.no-style li {
+	float: left;
+	width: 25%;
+}
+
+
+#title li {
+	width: 100%;
+	text-align: center;
+}
+
+#title li img {
+	width: 25%;
+}
+
+.head li img {
+	width: 45%;
+}
+
+.foot li img {
+	width: 55%;
+}
+
+.right {
+	float: right;
+}
+
+
+.margin-top-15 {
+	margin-top: 15px;
+}
+
+
+
+.order {
+	padding-top: 25px;
+	padding-bottom: 10px
+}
+
+p {
+	margin: 3px;
+}
+
+.margin-top-16 {
+	margin-top: -14px;
+}
+
+.foot li {
+	margin: 0px -1px;
+	border: 1px solid #F5F5F5;
+}
+
+.border-bottom {
+	border-bottom: 2px solid #f5f5f5;
+}
+
+.header {
+	padding: 8px 10px;
+}
+
+.grey {
+	color: #A2A3A7;
+}
+.red{
+	color:red;
+}

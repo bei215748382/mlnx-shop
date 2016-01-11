@@ -46,4 +46,10 @@
 		select coupon_id
 		from t_user_coupon where user_id = #{user_id}
 	</select>
+	<select id="findCouponsById" resultType="tCoupon" parameterType="int">
+		select * from t_coupon where id in (select coupon_id
+		from t_user_coupon
+		where user_id = #{user_id} )
+	</select>
+
 </mapper>

@@ -2,6 +2,7 @@ package com.mlnx.shop.mapper;
 
 import java.util.List;
 
+import com.mlnx.shop.entity.TGoods;
 import com.mlnx.shop.entity.TUserCollection;
 
 public interface TUserCollectionMapper {
@@ -52,4 +53,12 @@ public interface TUserCollectionMapper {
 	 * @return
 	 */
 	List<Integer> findCollectionById(int user_id);
+
+	/**
+	 * 根据用户id查找搜藏的宝贝
+	 * 
+	 * @param id
+	 * @return
+	 */
+	List<TGoods> findCollectionsById(Integer id);
 }

@@ -4,20 +4,24 @@
 
 	<classPathEntry
 		location="V:\tomcatspringmvc\.m2\mysql\mysql-connector-java\5.1.6\mysql-connector-java-5.1.6.jar" />
-	<context id="context1" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+	<context id="context1" targetRuntime="MyBatis3Simple"
+		defaultModelType="flat">
+		<commentGenerator>
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
 			connectionURL="jdbc:mysql://localhost:3306/shop?useUnicode=true&amp;characterEncoding=utf8"
 			userId="root" password="123456" />
 		<javaModelGenerator targetPackage="com.mlnx.shop.entity"
-			targetProject="V:\eclipse_workspace\mlnx-shop\src\main\java" />
+			targetProject="C:\Users\bwh\git\mlnx-shop\mlnx-shop\src\main\java" />
 		<sqlMapGenerator targetPackage="com.mlnx.shop.mapper"
-			targetProject="V:\eclipse_workspace\mlnx-shop\src\main\java" />
+			targetProject="C:\Users\bwh\git\mlnx-shop\mlnx-shop\src\main\java" />
 		<javaClientGenerator targetPackage="com.mlnx.shop.mapper"
-			targetProject="V:\eclipse_workspace\mlnx-shop\src\main\java"
-			type="XMLMAPPER" />
+			targetProject="C:\Users\bwh\git\mlnx-shop\mlnx-shop\src\main\java" type="XMLMAPPER" />
 		<!-- 匹配所有表 -->
-		<table tableName="%">
-		<generatedKey column="id" sqlStatement="Mysql"/>
-		</table>
+		<!-- <table tableName="%"> -->
+		<!-- <generatedKey column="id" sqlStatement="Mysql" /> -->
+		<!-- </table> -->
+		<table tableName="t_coupon"></table>
 	</context>
 </generatorConfiguration>

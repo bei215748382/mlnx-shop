@@ -42,4 +42,8 @@
 		<filter-name>Spring character encoding filter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
+		<!--设置超时时间，60代表60分钟- -->
+	<session-config>
+		<session-timeout>60</session-timeout>
+	</session-config>
 </web-app>

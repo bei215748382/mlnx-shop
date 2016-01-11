@@ -2,6 +2,7 @@ package com.mlnx.shop.mapper;
 
 import java.util.List;
 
+import com.mlnx.shop.entity.TCoupon;
 import com.mlnx.shop.entity.TUserCoupon;
 
 public interface TUserCouponMapper {
@@ -52,4 +53,12 @@ public interface TUserCouponMapper {
 	 * @return
 	 */
 	List<Integer> findCouponById(int user_id);
+
+	/**
+	 * 查看个人优惠券
+	 * 
+	 * @param id
+	 * @return
+	 */
+	List<TCoupon> findCouponsById(Integer id);
 }
