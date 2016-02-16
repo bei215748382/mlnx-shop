@@ -1,0 +1,70 @@
+ul > li {
+	width:50%;
+	text-align:center;
+	float:left;
+	margin-top:15px;
+	padding:10px 0px;
+}
+
+body{
+	background-image:url("../../img/shop/login/login.png");
+	background-size:100%;
+	background-position-y:66px;
+    background-repeat: no-repeat;
+	background-color:rgb(35,147,243);
+	background-attachment:fixed;
+	color:white;
+}
+
+input{
+	background:transparent;
+	border:1px solid #ffffff;
+	width:100%;
+	height:35px;
+}
+.pull-right{
+	float:right;
+}
+.btn{
+	background:transparent;
+	border:1px solid rgb(35,147,243);
+	border-radius:20px;
+	width:120px;
+	height:40px;
+	color: rgb(35,147,243);
+	font-size:1.5em;
+}
+.phone-input{
+	background:url("../../img/shop/login/triangle.png") no-repeat scroll right center transparent; 
+    background-size: 36px;
+}
+.password-input{
+	background:url("../../img/shop/login/keyboard.png") no-repeat scroll right center transparent; 
+    background-size: 36px;
+}
+.send-input{
+	background:url("../../img/shop/login/send.png") no-repeat scroll right center transparent; 
+	background-size: 86px;
+}
+::-webkit-input-placeholder { /* WebKit browsers */ 
+padding:2px 5px;
+color: #ffffff; 
+} 
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+padding:2px 5px;
+color: #ffffff;
+} 
+::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+padding:2px 5px;
+color: #ffffff; 
+} 
+:-ms-input-placeholder { /* Internet Explorer 10+ */ 
+padding:2px 5px;
+color: #ffffff; 
+} 
+
+.active>span{
+	border-bottom:2px solid ;
+	padding:20px;
+	border-color:rgb(255,218,0);
+}

@@ -1,5 +1,6 @@
 package com.mlnx.shop.service;
 
+import java.util.List;
 import java.util.Map;
 
 import com.mlnx.shop.entity.TGoods;
@@ -24,5 +25,8 @@ public interface GoodsService {
 
 	// 按时间、价格、销量、人气、分页等各种查询条件查找
 	public Map<String, Object> selectByMap(Map<String,Object> map);
+
+	//根据web参数查找页面
+	public List<TGoods> findGoods(Map<String,Object> map);
 	
 }

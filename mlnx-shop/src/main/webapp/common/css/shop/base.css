@@ -19,7 +19,17 @@ body {
 	margin: 0 0;
 	text-align: center;
 }
-
+.tab-pane{
+	width:80%;
+	margin:0 auto;
+	text-align:center;
+}
+.pull-right{
+	float:right;
+}
+.pull-left{
+	float:left;
+}
 .bg-white {
 	background-color: white;
 }
@@ -29,4 +39,44 @@ body {
 .font-white {
 	font-size: 1.2em;
 	color: white;
+}
+.pd-15{
+	padding:15px;
+}
+.pd-25{
+	padding:25px
+}
+.mg-top-15{
+	margin-top:15px;
+}
+.mg-top-36{
+	margin-top:36px;
+}
+.mg-top-46{
+	margin-top:46px;
+}
+.mg-top-76{
+	margin-top:76px;
+}
+.mg-top-150{
+	margin-top:150px;
+}
+.mg-top-200{
+	margin-top:200px;
+}
+.mg-top-250{
+	margin-top:250px;
+}
+.bd-right-0 {
+	border-right: 0;
+}
+.input-group{
+	display: table;
+	width:100%;
+}
+.input-group-addon{
+	border: 1px solid #ffffff;
+	display: table-cell;
+	border-left: 0;
+	background-color: #2C60BD;
 }

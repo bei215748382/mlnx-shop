@@ -98,4 +98,14 @@ public class GoodsServiceImpl implements GoodsService{
 		return resultMap;
 	}
 
+	@Override
+	public List<TGoods> findGoods(Map<String, Object> map) {
+		try{
+			return tGoodsMapper.selectByMap(map);
+		} catch(Exception e){
+			e.printStackTrace();
+			return null;
+		}
+	}
+
 }

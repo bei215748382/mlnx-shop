@@ -57,5 +57,11 @@
 			src="${ctx}/common/img/shop/search/shangping.png" alt="" />
 	</div>
 	<div class="clear"></div>
+	
+	<c:forEach items="${goods}" var="collection">
+<label>搜藏的商品id:${collection.id}</label><br/>
+<label>搜藏的商品名称:${collection.name}</label><br/>
+<label>搜藏的商品名称:${collection.price}</label><br/><br/><br/>
+</c:forEach>
 </body>
 </html>

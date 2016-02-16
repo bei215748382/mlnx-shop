@@ -18,4 +18,14 @@ public class StringUtil {
 	public static final String login_user = "login_user";//用户保存登入用户
 	
 	public static final String url = "url";
+	
+	public static final String classifyId = "classifyId";//商品 查询的分类
+	public static final String activitiyId = "activitiyId";//商品 查询的活动
+	public static final String valid = "valid";//商品 是否上架，1表示上架
+	public static final String start = "start";//商品 查询的 起始条数
+	public static final String end = "end";//商品  查询的 结束条数
+	public static final String date = "date";//商品 查询的日期
+	public static final String price = "price";//商品 查询的价格
+	public static final String populartiy = "populartiy";//商品 查询的人气
+	public static final String sales = "sales";//商品 查询的销量
 }

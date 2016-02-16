@@ -53,4 +53,12 @@ public interface TGoodsMapper {
 	 * @return
 	 */
 	List<TGoods> selectByMap(Map<String, Object> map);
+
+	/**
+	 * 根据条件查找数据
+	 * 
+	 * @param map
+	 * @return
+	 */
+	List<TGoods> findGoods(Map<String,Object> map);
 }

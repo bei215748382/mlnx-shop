@@ -96,9 +96,8 @@
 		select *
 		from t_goods
 	</select>
-	<select id="selectByMap" resultMap="BaseResultMap"
-		parameterType="map">
-		select *
+	<select id="selectByMap" resultMap="BaseResultMap" parameterType="map">
+			select *
 		from t_goods
 		<where>
 			<if test="classifyId != null and classifyId != ''">
@@ -116,13 +115,13 @@
 				order by ${date}
 			</when>
 			<when test="price != null and price != ''">
-				price by ${price}
+				order by price ${price}
 			</when>
 			<when test="populartiy != null and populartiy != ''">
-				populartiy by ${populartiy}
+				order by populartiy ${populartiy}
 			</when>
 			<when test="sales != null and sales != ''">
-				sales by ${sales}
+				order by sales ${sales}
 			</when>
 		</choose>
 		limit #{start},#{end}

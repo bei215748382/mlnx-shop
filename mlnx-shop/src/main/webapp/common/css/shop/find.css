@@ -1,0 +1,56 @@
+body{
+	background-image:url("../../img/shop/find/reset.png");
+	background-size:100%;
+    background-repeat: no-repeat;
+	background-attachment:fixed;
+}
+.title{
+	margin-top:-42px;
+	text-align:center;
+	color:rgb(35,147,243);
+}
+input{
+	background:transparent;
+	border:1px solid #ffffff;
+	height:36px;
+	display: table-cell;
+	width:100%;
+	background-color: #F7F7F7;
+}
+
+span{
+	color:white;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */ 
+padding:2px 5px;
+color: grey; 
+} 
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+padding:2px 5px;
+color: grey; 
+} 
+::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+padding:2px 5px;
+color: grey; 
+} 
+:-ms-input-placeholder { /* Internet Explorer 10+ */ 
+padding:2px 5px;
+color: grey; 
+} 
+.yellow {
+	border: 1px solid rgb(255,143,30);
+}
+input:focus{
+	outline: none;
+	color:rgb(255,143,30);
+}
+.btn{
+	background:transparent;
+	border:1px solid rgb(255,143,30);
+	border-radius:20px;
+	width:120px;
+	height:40px;
+	color: rgb(255,143,30);
+	font-size:1.5em;
+}

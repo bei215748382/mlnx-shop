@@ -59,5 +59,15 @@ public class GoodsServiceTest extends TestBase {
 		map.put("end", 2);
 		System.out.println(goodsService.selectByMap(map));
 	}
+	
+	@Test
+	public void findGoods(){
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("classifyId", 1);
+		map.put("valid", 1);
+		map.put("start",0);
+		map.put("end", 2);
+		System.out.println(goodsService.findGoods(map));
+	}
 
 }

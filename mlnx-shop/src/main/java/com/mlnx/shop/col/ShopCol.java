@@ -36,10 +36,11 @@ public class ShopCol {
 	 * @param phone
 	 * @param password
 	 * @return
-	 * @throws IOException 
+	 * @throws IOException
 	 */
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public void login(HttpSession session, String phone, String password,HttpServletResponse response) throws IOException {
+	public void login(HttpSession session, String phone, String password,
+			HttpServletResponse response) throws IOException {
 		TUser user = new TUser();
 		user.setPhone(phone);
 		user.setPassword(password);
@@ -49,7 +50,7 @@ public class ShopCol {
 			Integer userId = (Integer) map.get(StringUtil.responseObj);
 			user.setId(userId);
 			session.setAttribute(StringUtil.login_user, user);
-			String url = (String)session.getAttribute(StringUtil.url);
+			String url = (String) session.getAttribute(StringUtil.url);
 			response.sendRedirect(url);
 		} else {
 			response.sendRedirect("shop/login");
@@ -85,15 +86,30 @@ public class ShopCol {
 		return "shop/index";
 	}
 
-
-	// 搜索
-	@RequestMapping("/search")
-	public String search() {
-		return "shop/search";
+	// 找回密码
+	@RequestMapping("/find")
+	public String find() {
+		return "shop/find";
 	}
-
-
-
+	
+	// 重置密码
+	@RequestMapping("/reset")
+	public String reset() {
+		return "shop/reset";
+	}
+	
+	// 我的订单
+	@RequestMapping("/order")
+	public String order() {
+		return "shop/order";
+	}
+	
+	// 设置
+	@RequestMapping("/setting")
+	public String setting() {
+		return "shop/setting";
+	}
+	
 	@RequestMapping("/json")
 	@ResponseBody
 	public TUser json() {
