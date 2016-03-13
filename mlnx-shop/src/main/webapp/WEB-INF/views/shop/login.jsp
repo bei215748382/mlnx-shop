@@ -22,9 +22,9 @@
 </div>
 
 <script type="text/ng-template" id="login.html">
-<form class="tab-pane" id="login" role="form" >
-<input type="text"  class="phone-input mg-top-76" placeholder="注册/手机号" /><br/>
-<input type="password"  class="password-input mg-top-15" placeholder="密码" /><br/>
+<form class="tab-pane" id="login" role="form" action="${ctx}/shop/login" method="post">
+<input type="text" name="phone" class="phone-input mg-top-76" placeholder="注册/手机号" /><br/>
+<input type="password" name="password" class="password-input mg-top-15" placeholder="密码" /><br/>
 <label class="pull-right mg-top-15">忘记密码</label></br>
 <div class="clear"></div>
 <button type="submit" class="btn mg-top-250">登入</button>
@@ -32,9 +32,9 @@
 </script>
 	
 <script type="text/ng-template" id="regist.html">
-<form  class="tab-pane" id="regist" role="form">
-<input type="text" class="phone-input mg-top-76" placeholder="注册/手机号" />
-<input type="password" class="password-input mg-top-15" placeholder="密码" />
+<form  class="tab-pane" id="regist" role="form" action="${ctx}/shop/regist" method="post">
+<input type="text" name="phone" class="phone-input mg-top-76" placeholder="注册/手机号" />
+<input type="password" name="password" class="password-input mg-top-15" placeholder="密码" />
 <div class="input-group mg-top-15" id="sendBox">
 <input type="text" class="bd-right-0" placeholder="发送短信验证码" /><div class="input-group-addon"><span>发送验证码</span></div>
 </div>

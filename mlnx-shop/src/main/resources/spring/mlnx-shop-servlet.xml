@@ -33,7 +33,7 @@
 	<mvc:interceptors>
 <!--  		多个拦截器,顺序执行  -->
 		<mvc:interceptor>
-			<mvc:mapping path="/person/**" />
+			<mvc:mapping path="/shop/person/**" />
 			<bean class="com.mlnx.shop.filter.LoginInterceptor"></bean>
 		</mvc:interceptor>
 	</mvc:interceptors>

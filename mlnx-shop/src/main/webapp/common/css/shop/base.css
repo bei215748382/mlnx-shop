@@ -8,7 +8,9 @@ body {
 .clear {
 	clear: both;
 }
-
+.center{
+	text-align:center;
+}
 .no-style {
 	margin:0;
 	padding-left: 0;
@@ -36,9 +38,15 @@ body {
 .bg-blue {
 	background-color: rgb(99, 183, 255);
 }
+.bg-gray{
+	background-color: rgb(248,248,248);
+}
 .font-white {
 	font-size: 1.2em;
 	color: white;
+}
+.pd-1{
+	padding:1em;
 }
 .pd-15{
 	padding:15px;
@@ -48,6 +56,9 @@ body {
 }
 .mg-top-15{
 	margin-top:15px;
+}
+.mg-top-20{
+	margin-top:20px;
 }
 .mg-top-36{
 	margin-top:36px;
@@ -67,16 +78,12 @@ body {
 .mg-top-250{
 	margin-top:250px;
 }
-.bd-right-0 {
-	border-right: 0;
+.table{
+	display:table;
 }
-.input-group{
-	display: table;
-	width:100%;
+.table-row{
+	display:table-row;
 }
-.input-group-addon{
-	border: 1px solid #ffffff;
-	display: table-cell;
-	border-left: 0;
-	background-color: #2C60BD;
+.table-cell{
+	display:table-cell;
 }

@@ -13,8 +13,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.mlnx.shop.entity.TUser;
+import com.mlnx.shop.exception.RegisterException;
 import com.mlnx.shop.service.UserService;
 import com.mlnx.shop.util.EnumCollection.ResponseCode;
+import com.mlnx.shop.util.ShopResponse;
 import com.mlnx.shop.util.StringUtil;
 
 @Controller
@@ -57,7 +59,22 @@ public class ShopCol {
 		}
 
 	}
+	
+	@RequestMapping(value = "/regist", method = RequestMethod.POST)
+	public void regist(HttpSession session, String phone, String password,
+			HttpServletResponse response) throws IOException, RegisterException {
+		TUser user = new TUser();
+		user.setPhone(phone);
+		user.setPassword(password);
+		ShopResponse shopResponse = userService.regist(user);
+		if (shopResponse.getResponseCode()
+				.endsWith(ResponseCode.EXIST.getCode())) {
+			response.sendRedirect("index");
+		} else {
+			response.sendRedirect("login");
+		}
 
+	}
 	// 退出
 	@RequestMapping("/logout")
 	public String logout(HttpSession session) throws Exception {
@@ -91,25 +108,49 @@ public class ShopCol {
 	public String find() {
 		return "shop/find";
 	}
-	
+
 	// 重置密码
 	@RequestMapping("/reset")
 	public String reset() {
 		return "shop/reset";
 	}
-	
-	// 我的订单
-	@RequestMapping("/order")
-	public String order() {
-		return "shop/order";
+
+	// 个人中心
+	@RequestMapping("/person")
+	public String person() {
+		return "shop/person/person";
 	}
-	
+
+	// 我的订单
+	@RequestMapping("/person/order")
+	public String order() {
+		return "shop/person/order";
+	}
+
+	// 我的收藏
+	@RequestMapping("/person/collection")
+	public String collection() {
+		return "shop/person/collection";
+	}
+
+	// 我的优惠券
+	@RequestMapping("/person/coupon")
+	public String coupon() {
+		return "shop/person/coupon";
+	}
+
+	// 我的地址
+	@RequestMapping("/person/address")
+	public String address() {
+		return "shop/person/address";
+	}
+
 	// 设置
 	@RequestMapping("/setting")
 	public String setting() {
 		return "shop/setting";
 	}
-	
+
 	@RequestMapping("/json")
 	@ResponseBody
 	public TUser json() {

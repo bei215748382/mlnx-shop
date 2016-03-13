@@ -13,7 +13,7 @@
 </head>
 <body>
 	<div class="bg-blue font-white header">
-		<span>&lt;</span><span class="right" onclick="fun()">设置</span>
+		<span onclick="back();">&lt;</span><span class="right" onclick="setting()">设置</span>
 	</div>
 	<div>
 		<ul class="no-style font-white" id="title">
@@ -84,10 +84,11 @@
 				<p>更多</p></li>
 		</ul>
 	</div>
+	<script src="${ctx}/common/js/base.js"></script>
 	<script>
-		function fun() {
-			console.log("hehe");
-		}
+	function setting() {
+		window.location.href="${ctx}/shop/setting";
+	}
 	</script>
 </body>
 </html>

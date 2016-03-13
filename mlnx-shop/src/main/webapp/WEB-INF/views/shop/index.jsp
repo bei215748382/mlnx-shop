@@ -63,7 +63,7 @@
 		<div class="clear"></div>
 		<div>
 			<ul class="no-style">
-				<li><img src="${ctx}/common/img/shop/index/person_center.png"
+				<li onclick="hello()"><img src="${ctx}/common/img/shop/index/person_center.png"
 					alt="person_center" />
 					<p>我的</p></li>
 				<li><img src="${ctx}/common/img/shop/index/order.png" alt="order" />
@@ -114,6 +114,9 @@
 				interval : 5000
 			});
 		});
+		function hello(){
+			window.location.href="${ctx}/shop/person";
+		}
 	</script>
 </body>
 </html>

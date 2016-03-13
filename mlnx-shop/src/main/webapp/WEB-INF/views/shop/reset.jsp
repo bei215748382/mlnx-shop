@@ -20,6 +20,7 @@
 <input type="text"  class="phone-input mg-top-15" placeholder="确认密码" /><br/>
 <button type="submit" class="btn mg-top-250">确&nbsp;认</button>
 </form>
+
 <script>
 	window.onload = function() {
 		var elements = document.getElementsByTagName("input");

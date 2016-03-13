@@ -32,11 +32,11 @@ li{
 </style>
 </head>
 <body ng-app="setting-app" ng-controller="settingCol">
-<header><img src="${ctx}/common/img/back-white.png" alt="back"/><div class="title">设置</div></header>
+<header><img src="${ctx}/common/img/back-white.png" alt="back" onclick="back()"/><div class="title">设置</div></header>
 <ul class="no-style">
 <li ng-repeat="menu in menus"><span class="nav">{{menu.title}}</span></li>
 </ul>
-
+<script src="${ctx}/common/js/base.js"></script>
 <script src="${ctx}/common/plugins/angular/angular.min.js"></script>
 <script>
     angular.module('setting-app',[]).controller('settingCol',function($scope){ 

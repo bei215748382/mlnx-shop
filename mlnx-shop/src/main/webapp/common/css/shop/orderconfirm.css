@@ -1,0 +1,92 @@
+	header{
+		line-height:60px;
+		height:60px;
+		background-color:rgb(56,163,255);
+		text-align:center;
+		vertical-align:middle;
+		font-size:2em;
+		color:white;
+	}
+	#back{
+		position:absolute;
+		left:20px;
+		z-index:1;
+	}
+	section{
+		margin-top:20px;
+		background-color:white;
+	}
+	section .table-cell{
+		height:60px;
+		vertical-align: middle;
+	}
+	.table{
+		padding:2em 1em;
+		margin-bottom:0px;
+	}
+	.text-left,
+	.text-right{
+		padding:1em 1em;
+		width:50%;
+		float:left;
+	}
+	.text-right{
+		text-align:right;
+	}
+	.message{
+		width: 80%;
+        border-radius: 4px;
+		background-color: #F3F3F3;
+	}
+	.pay-mode{
+		padding:1em;
+		vertical-align:middle;
+	}
+	.pay-img,
+	.pay-desc,
+	.pay-check{
+		display:block;
+		height:50px;
+		line-height:50px;
+		float:left;
+		text-align:center;
+	}
+	.pay-img{
+		max-width:50px;
+		width:20%;
+	}
+	.pay-desc{
+		width:75%;
+	}
+	.pay-check{
+		width:5%;
+		margin:0px 0px;
+		max-width:20px;
+	}
+	
+	.footer{
+		position:fixed;
+		bottom:0px;
+		height:60px;
+		width:100%;
+		
+	}
+	
+	.total,
+	.pay{
+		float:left;
+		text-align:center;
+		vertical-align:middle;
+		line-height:60px;
+	}
+	.total{
+		width:70%;
+		background-color:white;
+	}
+	.pay{
+		width:30%;
+		color:white;
+		font-size:1.6em;
+		background-color:rgb(255,84,4);
+	}
+	

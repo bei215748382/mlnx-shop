@@ -24,9 +24,11 @@ public class GoodsCol {
 
 	// 搜索
 	@RequestMapping(value = "/search")
-	public ModelAndView search(HttpServletRequest request,Integer classifyId,Integer activitiyId,Integer valid,Integer start,Integer end,String date,String price,String populartiy,String sales) {
+	public ModelAndView search(HttpServletRequest request, Integer classifyId,
+			Integer activitiyId, Integer valid, Integer start, Integer end,
+			String date, String price, String populartiy, String sales) {
 		ModelAndView mav = new ModelAndView("shop/goods/search");
-		Map<String, Object> map = new HashMap<String, Object>(); 
+		Map<String, Object> map = new HashMap<String, Object>();
 		map.put(StringUtil.classifyId, classifyId);
 		map.put(StringUtil.activitiyId, activitiyId);
 		map.put(StringUtil.valid, valid);
@@ -39,5 +41,35 @@ public class GoodsCol {
 		List<TGoods> goods = goodsService.findGoods(map);
 		mav.addObject("goods", goods);
 		return mav;
+	}
+
+	// 产品
+	@RequestMapping(value = "product")
+	public String product() {
+		return "shop/goods/product";
+	}
+
+	// 下单
+	@RequestMapping(value = "preorder")
+	public String preorder() {
+		return "shop/goods/preorder";
+	}
+
+	// 订单确认
+	@RequestMapping(value = "orderconfirm")
+	public String orderconfirm() {
+		return "shop/goods/orderconfirm";
+	}
+
+	// 订单取消
+	@RequestMapping(value = "ordercancel")
+	public String ordercancel() {
+		return "shop/goods/ordercancel";
+	}
+
+	// 订单评价
+	@RequestMapping(value = "comment")
+	public String comment() {
+		return "shop/goods/comment";
 	}
 }
